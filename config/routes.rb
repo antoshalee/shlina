@@ -1,4 +1,7 @@
 Shlina::Application.routes.draw do
+
+  resources :posts, only: [:show, :create, :new]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
