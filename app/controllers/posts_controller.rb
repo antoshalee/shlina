@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def show
-    @post = Post.find params[:id]
+    @post = Post.find_by_url params[:id]
   end
 
   def new
@@ -14,6 +14,5 @@ class PostsController < ApplicationController
     else
       render action: :new
     end
-
   end
 end
